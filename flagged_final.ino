@@ -243,7 +243,7 @@ void checkForLightsOn(){
                 // Use WiFiClient class to create TCP connections
                 WiFiClient client;
                 HTTPClient http;
-                
+                // turn on smart lights. smart lights running on 192.168.1.150
       String serverPath = "http://192.168.1.150/?socket=2On";
       http.begin(client, serverPath.c_str());
       http.GET(); // Send HTTP GET request    
@@ -270,7 +270,7 @@ if(people == 0){
         // Use WiFiClient class to create TCP connections
           WiFiClient client;
           HTTPClient http;
-  
+      // turn off smart lights. smart lights running on 192.168.1.150
       String serverPath = "http://192.168.1.150/?socket=2Off";
       http.begin(client, serverPath.c_str());
       http.GET(); // Send HTTP GET request   
